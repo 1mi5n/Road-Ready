@@ -74,6 +74,29 @@
         </section>
 
     </div>
+<script>
+document.querySelector(".primary-btn").addEventListener("click", function() {
+    
+    let budget = prompt("What is your budget? (Under 1500 / 1500-3000 / 3000+)");
+    let style = prompt("Do you prefer comfort or speed?");
 
+    if (budget === null || style === null) return;
+
+    budget = budget.toLowerCase();
+    style = style.toLowerCase();
+
+    let recommendation = "";
+
+    if (budget.includes("under")) {
+        recommendation = "You should look at Budget Aluminum Endurance Bikes.";
+    } else if (style.includes("comfort")) {
+        recommendation = "An Endurance Road Bike would be perfect for you.";
+    } else {
+        recommendation = "A Race Road Bike sounds like your style.";
+    }
+
+    alert(recommendation);
+});
+</script>
 </body>
 </html>
