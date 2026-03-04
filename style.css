@@ -1,0 +1,111 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, #f7fdf9 0%, #ffffff 100%);
+    color: #1a1a1a;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: #666;
+    margin-top: 8px;
+    font-size: 18px;
+}
+
+/* Hero Card */
+.hero-card {
+    background: linear-gradient(135deg, #1f7a4c, #3cb371);
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.hero-card h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.hero-card p {
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.primary-btn {
+    background: white;
+    color: #1f7a4c;
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Sections */
+.section {
+    margin-bottom: 50px;
+}
+
+.section h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.card p {
+    color: #666;
+    font-size: 14px;
+}
