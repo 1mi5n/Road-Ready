@@ -98,5 +98,61 @@ document.querySelector(".primary-btn").addEventListener("click", function() {
     alert(recommendation);
 });
 </script>
+<!-- Modal -->
+<div id="quizModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Find Your Perfect Bike</h2>
+
+        <div class="quiz-section">
+            <label>Budget:</label>
+            <select id="budget">
+                <option value="under1500">Under $1500</option>
+                <option value="midrange">$1500–$3000</option>
+                <option value="highend">$3000+</option>
+            </select>
+        </div>
+
+        <div class="quiz-section">
+            <label>Ride Style:</label>
+            <select id="style">
+                <option value="comfort">Comfort</option>
+                <option value="speed">Speed</option>
+            </select>
+        </div>
+
+        <button class="primary-btn" onclick="recommendBike()">See Recommendation</button>
+
+        <p id="result" class="result"></p>
+    </div>
+</div>
+
+<script>
+function openModal() {
+    document.getElementById("quizModal").style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById("quizModal").style.display = "none";
+    document.getElementById("result").innerText = "";
+}
+
+function recommendBike() {
+    const budget = document.getElementById("budget").value;
+    const style = document.getElementById("style").value;
+
+    let recommendation = "";
+
+    if (budget === "under1500") {
+        recommendation = "We recommend a Budget Aluminum Endurance Bike.";
+    } else if (style === "comfort") {
+        recommendation = "An Endurance Road Bike would be perfect for you.";
+    } else {
+        recommendation = "A Race Road Bike sounds like your style.";
+    }
+
+    document.getElementById("result").innerText = recommendation;
+}
+</script>
 </body>
 </html>
