@@ -89,11 +89,13 @@ header h1 {
 
 /* Cards */
 .card {
-    background: white;
-    padding: 25px;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    transition: 0.2s ease;
+    background:white;
+    padding:20px;
+    border-radius:18px;
+    width:280px;
+    max-width:280px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.06);
+    transition:all 0.3s ease;
 }
 
 .card:hover {
