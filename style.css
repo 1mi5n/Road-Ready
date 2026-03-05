@@ -93,10 +93,9 @@ header h1 {
     padding:20px;
     border-radius:18px;
     width:260px;
-    max-width:260px;
     box-shadow:0 15px 40px rgba(0,0,0,0.06);
+    overflow:hidden;
 }
-
 .card:hover {
     transform: translateY(-4px);
 }
