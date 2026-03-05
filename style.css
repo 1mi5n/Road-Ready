@@ -88,14 +88,13 @@ header h1 {
 }
 
 /* Cards */
-.card {
+.card{
     background:white;
     padding:20px;
     border-radius:18px;
-    width:280px;
-    max-width:280px;
+    width:260px;
+    max-width:260px;
     box-shadow:0 15px 40px rgba(0,0,0,0.06);
-    transition:all 0.3s ease;
 }
 
 .card:hover {
