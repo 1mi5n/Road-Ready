@@ -224,5 +224,8 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
-    }
+    .card-img{
+    width:100%;
+    border-radius:12px;
+    margin-bottom:15px;
 }
