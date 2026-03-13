@@ -193,8 +193,10 @@ body {
 /* Card Section */
 
 .section {
-    padding: 80px 20px;
-    text-align: center;
+    text-align:center;
+    margin-top:20px;
+    margin-bottom:20px;
+    padding:20px;
 }
 .card-container{
     display:grid;
