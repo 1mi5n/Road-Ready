@@ -1,136 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RoadReady</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bike Finder</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#f3f3f3;
+}
+
+.container{
+max-width:500px;
+margin:auto;
+padding:15px;
+}
+
+.title{
+text-align:center;
+font-size:26px;
+font-weight:bold;
+margin-bottom:15px;
+}
+
+.find-bike{
+background:white;
+border-radius:12px;
+padding:15px;
+box-shadow:0 3px 8px rgba(0,0,0,0.15);
+margin-bottom:20px;
+text-align:center;
+}
+
+.find-bike img{
+width:100%;
+border-radius:10px;
+}
+
+.find-bike button{
+margin-top:10px;
+padding:12px;
+width:100%;
+background:#0077ff;
+border:none;
+color:white;
+font-size:16px;
+border-radius:8px;
+}
+
+.tabs{
+display:flex;
+justify-content:space-between;
+margin-bottom:10px;
+}
+
+.tab{
+flex:1;
+text-align:center;
+padding:10px;
+background:white;
+margin:3px;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+box-shadow:0 2px 5px rgba(0,0,0,0.15);
+}
+
+.tab.active{
+background:#0077ff;
+color:white;
+}
+
+.tab-content{
+display:none;
+}
+
+.tab-content.active{
+display:block;
+}
+
+.bike-card{
+background:white;
+margin-top:10px;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 2px 6px rgba(0,0,0,0.15);
+}
+
+.bike-card img{
+width:100%;
+}
+
+.bike-info{
+padding:10px;
+}
+
+.bike-name{
+font-weight:bold;
+font-size:18px;
+}
+
+.price{
+color:green;
+font-weight:bold;
+margin-top:4px;
+}
+
+</style>
 </head>
+
 <body>
-    <section class="hero">
-    <h1>Find Your First Road Bike</h1>
-    <p>Beginner-friendly recommendations in seconds.</p>
 
-    <button class="primary-btn" onclick="openModal()">Find My Bike</button>
-</section>
-    
-    <section class="section">
+<div class="container">
 
-    <div class="card-container">
-<section class="section">
- 
-    </div>
-        </section>
+<div class="title">Bike Finder</div>
 
-        <section class="section">
-            <h3>Starter Gear</h3>
+<div class="find-bike">
+<img src="https://images.unsplash.com/photo-1518655048521-f130df041f66">
+<h3>Find My Bike</h3>
+<p>Search road, gravel, or mountain bikes.</p>
+<button onclick="alert('Search feature coming soon')">Start Search</button>
+</div>
 
-            <div class="grid">
-                <div class="card">
-                    <h4>Helmets</h4>
-                    <p>Stay safe and protect your head.</p>
-                </div>
+<div class="tabs">
+<div class="tab active" onclick="openTab('road')">Road</div>
+<div class="tab" onclick="openTab('gravel')">Gravel</div>
+<div class="tab" onclick="openTab('mountain')">MTB</div>
+</div>
 
-                <div class="card">
-                    <h4>Cycling Shoes</h4>
-                    <p>Improve power and pedaling efficiency.</p>
-                </div>
+<div id="road" class="tab-content active">
 
-                <div class="card">
-                    <h4>Jerseys</h4>
-                    <p>Stay cool and comfortable on rides.</p>
-                </div>
+<div class="bike-card">
+<img src="https://images.unsplash.com/photo-1511994298241-608e28f14fde">
+<div class="bike-info">
+<div class="bike-name">Canyon Endurace</div>
+<div>Shimano 105 • Carbon Frame</div>
+<div class="price">$1,300</div>
+</div>
+</div>
 
-                <div class="card">
-                    <h4>Bike Computers</h4>
-                    <p>Track your rides and progress.</p>
-                </div>
-            </div>
-        </section>
+<div class="bike-card">
+<img src="https://images.unsplash.com/photo-1507036066871-b7e8032b3dea">
+<div class="bike-info">
+<div class="bike-name">Giant TCR</div>
+<div>Ultegra • Carbon Wheels</div>
+<div class="price">$1,800</div>
+</div>
+</div>
 
-        <section class="section">
-            <h3>Learn the Basics</h3>
+</div>
 
-            <div class="grid">
-                <div class="card">
-                    <h4>Carbon vs Aluminum</h4>
-                    <p>Understand frame materials.</p>
-                </div>
+<div id="gravel" class="tab-content">
 
-                <div class="card">
-                    <h4>Shimano 105 Explained</h4>
-                    <p>What this popular groupset means.</p>
-                </div>
+<div class="bike-card">
+<img src="https://images.unsplash.com/photo-1541625602330-2277a4c46182">
+<div class="bike-info">
+<div class="bike-name">Canyon Grizl</div>
+<div>SRAM Rival • Aluminum</div>
+<div class="price">$1,400</div>
+</div>
+</div>
 
-                <div class="card">
-                    <h4>Endurance Geometry</h4>
-                    <p>Comfort vs aggressive positioning.</p>
-                </div>
+<div class="bike-card">
+<img src="https://images.unsplash.com/photo-1571066811602-716837d681de">
+<div class="bike-info">
+<div class="bike-name">Felt Broam</div>
+<div>Shimano GRX</div>
+<div class="price">$1,100</div>
+</div>
+</div>
 
-                <div class="card">
-                    <h4>Mechanical vs Electronic</h4>
-                    <p>Shifting system differences.</p>
-                </div>
-            </div>
-        </section>
+</div>
 
-    </div>
-</script>
-<!-- Modal -->
-<div id="quizModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h2>Find Your Perfect Bike</h2>
+<div id="mountain" class="tab-content">
 
-        <div class="quiz-section">
-            <label>Budget:</label>
-            <select id="budget">
-                <option value="under1500">Under $1500</option>
-                <option value="midrange">$1500–$3000</option>
-                <option value="highend">$3000+</option>
-            </select>
-        </div>
+<div class="bike-card">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+<div class="bike-info">
+<div class="bike-name">Trek Top Fuel</div>
+<div>SRAM AXS • Pike Ultimate</div>
+<div class="price">$2,200</div>
+</div>
+</div>
 
-        <div class="quiz-section">
-            <label>Ride Style:</label>
-            <select id="style">
-                <option value="comfort">Comfort</option>
-                <option value="speed">Speed</option>
-            </select>
-        </div>
+<div class="bike-card">
+<img src="https://images.unsplash.com/photo-1508973378895-5279b5f16c8c">
+<div class="bike-info">
+<div class="bike-name">Specialized Stumpjumper</div>
+<div>Fox Suspension</div>
+<div class="price">$2,400</div>
+</div>
+</div>
 
-        <button class="primary-btn" onclick="recommendBike()">See Recommendation</button>
+</div>
 
-        <p id="result" class="result"></p>
-    </div>
 </div>
 
 <script>
-function openModal() {
-    document.getElementById("quizModal").style.display = "flex";
+
+function openTab(tabName){
+
+let tabs=document.getElementsByClassName("tab");
+let contents=document.getElementsByClassName("tab-content");
+
+for(let i=0;i<tabs.length;i++){
+tabs[i].classList.remove("active");
+contents[i].classList.remove("active");
 }
 
-function closeModal() {
-    document.getElementById("quizModal").style.display = "none";
-    document.getElementById("result").innerText = "";
+document.getElementById(tabName).classList.add("active");
+
+if(tabName==="road")tabs[0].classList.add("active");
+if(tabName==="gravel")tabs[1].classList.add("active");
+if(tabName==="mountain")tabs[2].classList.add("active");
+
 }
 
-function recommendBike() {
-    const budget = document.getElementById("budget").value;
-    const style = document.getElementById("style").value;
-
-    let recommendation = "";
-
-    if (budget === "under1500") {
-        recommendation = "We recommend a Budget Aluminum Endurance Bike.";
-    } else if (style === "comfort") {
-        recommendation = "An Endurance Road Bike would be perfect for you.";
-    } else {
-        recommendation = "A Race Road Bike sounds like your style.";
-    }
-
-    document.getElementById("result").innerText = recommendation;
-}
 </script>
+
 </body>
 </html>
